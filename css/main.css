@@ -1,0 +1,168 @@
+@charset "utf-8";
+/*
+Y! CSS Reset http://developer.yahoo.com/yui/reset/
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+/*
+* Vanilla Stylesheet 0.9.5 http://noscope.com/vanilla-css
+*/
+body{font:9pt/1.5em Arial, Helvetica, sans-serif}pre,code,tt{font:1em/1.5em 'Andale Mono', 'Lucida Console', monospace}li ul,li ol{margin:0 1.5em}ul,ol,blockquote{margin:0 1.5em 1.5em}ul,ul li{list-style-type:disc}ol,ol li{list-style-type:decimal}dl,p,code,pre,kbd{margin:0 0 1.5em}dd{margin-left:1.5em}table{margin-bottom:1.4em;width:100%}th,dl dt,dfn,h1,h2,h3,h4,h5,h6,b,strong{font-weight:bold}th,td,caption{padding:4px 10px 4px 5px}tfoot,em,i,dfn{font-style:italic}sup,sub{line-height:0}abbr,acronym{border-bottom:1px dotted}address{margin:0 0 1.5em;font-style:italic}del{text-decoration:line-through}pre{margin:1.5em 0;white-space:pre}img.centered,.aligncenter,div.aligncenter{display:block;margin-left:auto;margin-right:auto}img.alignleft,img.alignright{display:inline}.alignright{float:right;margin-left:10px}.alignleft{float:left;margin-right:10px}.clearfix::after{content:".";display:block;height:0;clear:both;visibility:hidden}* html .clearfix,*:first-child+html .clearfix{zoom:1;display:block}
+/*
+* Sticky Footer CSS http://cssstickyfooter.com/
+*/
+html, body, #wrapper {height: 100%;}
+body > #wrapper {height: auto; min-height: 100%;}
+#main {padding-bottom: 160px;}  /* must be same height as the footer */
+#footer {
+	position: relative;
+	margin-top: -160px; /* negative value of footer height */
+	height: 160px;
+	clear:both;
+} 
+#footerwrap {
+	width:720px;
+	margin:0 auto;
+}
+#footerwrap #left, #footerwrap #right {
+	width:360px;
+	margin-top:62px;
+}
+#footerwrap #left {
+	float:left;
+}
+#footerwrap #right {
+	float:right;
+	text-align:right;
+}
+/* CLEAR FIX*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+
+/*
+* Start Template Styles
+
+* Basics
+*/
+html, body {
+	background: #FAFAF7 url(../images/wrapper-bg.gif);
+}
+a:active {
+	outline:none;
+}
+:focus { /* removes tabs' dotted border on firefox */
+  -moz-outline-style:none;
+}
+#header {
+	background: #114056;
+	height: 17px;
+	border-bottom: #E1DFD1 3px solid;
+}
+#logo {
+	padding: 1px 0px 1px 1px;
+}
+#content {
+	background-image: url(../images/white-alpha.png);
+	width: 720px;
+	height: auto;
+	min-height: 320px;
+	_height: 320px;
+	margin: 20px auto;
+	padding: 15px;
+}
+/*
+.content-active {
+	background:#fff;
+}
+*/
+/* fixed div look at ie.css for IE6 and below version */
+#fixme {
+	/* Netscape 4, IE 4.x-5.0/Win and other lesser browsers will use this */
+  position: absolute; left: 0px; top: 0px;
+}
+body > div#fixme {
+  /* used by Opera 5+, Netscape6+/Mozilla, Konqueror, Safari, OmniWeb 4.5+, iCab, ICEbrowser */
+  position: fixed;
+}
+
+
+/* 
+* Tabs
+*/
+ul#css-tabs {
+	margin:0 !important;
+	padding:15px 0px 0px 3px;
+	height:32px;
+	background:url(../images/blue-alpha.png);
+	/*
+	border-bottom:1px solid #666;
+	*/
+}
+ul#css-tabs li {
+	float:left;
+	margin:0;
+	list-style-type:none;
+}
+ul#css-tabs a {
+	float:left;
+	font-size:13px;
+	display:block;
+	padding:6px 30px;
+	text-decoration:none;
+	/* 
+	border:1px solid #666;
+	border-bottom:0px;
+	*/
+	height:18px;
+	color:#00334C;
+	margin:0px 2px 2px 2px;
+	-moz-border-radius-topleft: 1px;
+	-moz-border-radius-topright: 1px;
+	position:relative;
+	top:1px;
+}
+ul#css-tabs a:hover {
+	background: url(../images/blue-alpha.png);
+	_background: #DBE1E3;
+	color:#000;
+}
+ul#css-tabs a.current {
+	background: #FCFCFA url(../images/tab-bg.gif);
+	border-bottom:2px solid #FBFBFA;
+	color:#000;
+	cursor:default;
+}
+div.panes {
+	display:none;
+	padding:15px 18px 0px 18px;
+	min-height:150px;
+	/*
+	border:1px solid #005F8C;
+	border-width:0px 1px 1px 1px;
+	*/
+}
+
+
+/* 
+* Footer
+*/
+
+#footer {
+	background:url(../images/footer-bg.png) repeat-x;
+	overflow: hidden;
+}
+#footerwrap {
+	color: #B1BFBC;
+	line-height:12px;
+}

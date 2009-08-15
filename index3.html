@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>SahiSystem</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="description" content="SahiSystem.com" />
+<meta name="keywords" content="SahiSystem, HSE, environment, training, health, safety, workshops" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="width=718;initial-scale=1" />
+<meta name="author" content="Mohammad Taheri" />
+<meta name="microid" content="mailto+http:sha1:6f00209477560f479b357017ad8cf6ac61bf885a" />
+<link rel="icon" href="images/favicon.ico" />
+<link rel="Shortcut Icon" href="images/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<script src="js/jquery-1.2.6.pack.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <!-- This wrap div needs to encompass everything except the footer div at bottom -->
+  <div id="header">
+    <p>&nbsp;</p>
+  </div>
+  <div id="main" class="clearfix">
+    <!-- the clearfix keeps the footer from floating up -->
+    <!-- Inside this main div we are floating the content to the left and the sidbar to the right  -->
+      <div id="tabs">
+        <div id="logo"><a title="SahiSystem" href="./"><img src="images/sahisystem.gif" alt="SahiSystem" height="40" width="245" /></a></div>
+        
+        <!-- tabs -->
+        <div class="editable">
+            <ul id="nav" class="css-tabs">
+              <li><a href="events.html">Events</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- panes -->
+            <div class="css-panes">
+              <div id="content" style="display:block;"></div>
+            </div>
+        </div>
+
+        <!-- activate tabs with JavaScript -->
+        <script type="text/javascript">
+			
+				var siteTitle = document.title;
+				
+				$('#nav li a').click(function(){
+											  
+					var toLoad = $(this).attr('href');
+					
+					$('#nav li a').removeClass("current");
+                 	$(this).addClass("current");
+					
+					$('#content').fadeIn('fast',loadContent);
+					
+					//$('#load').remove();
+					//$('#content').append('<span id="load">LOADING...</span>');
+					//$('#load').show('fast');
+					
+					// Set New Title
+					window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
+					var page = window.location.hash.substring(1);
+					page = page.charAt(0).toUpperCase() + page.slice(1);
+					document.title = siteTitle + ' | ' + page;
+					
+					function loadContent() {
+						$('#content').load(toLoad,'',showNewContent())
+					}
+					
+					function showNewContent() {
+						//$('#content').show('fast',hideLoader());
+						$('#content').fadeIn('fast');
+					}
+					
+					
+					function hideLoader() {
+						$('#load').hide('fast');
+					}
+					
+					return false;
+					
+				});
+
+		</script>
+		</div>
+		<!-- tabs -->
+    <div id="sidebar"> </div>
+  </div>
+  <!-- clearfix -->
+</div>
+<!-- wrap -->
+<div id="footer">
+  <div id="foot">
+    <!-- this extra div is just centering the fixed width area of the footer content -->
+    <div id="left">
+      <p>&nbsp;</p>
+    </div>
+    <div id="right">
+      <p>#66, 3rd Fl., Bakhtiyar st. 7th tir Sqr.<br />
+		Tehran 1574615413 Iran<br /><br />
+		Tel., Fax : <br />
+        +98.21 88833843<br />
+        +98.21 88841588<br />
+        +98.21 88348852</p>
+    </div>
+  </div>
+  <!-- foot -->
+</div>
+<!-- footer -->
+</body>
+</html>

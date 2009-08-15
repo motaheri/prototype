@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* IE6 fixed positioning http://visibilityinherit.com/code/ie6-position-fixed.php */
+
+html { /* keeps the nav from jumping in IE6 */
+	background-image: url(../images/wrapper-bg.gif); /* use a fake image */
+}
+#nav { 
+	position:absolute; /* position fixed for IE6 */
+	top: expression(0+((e=document.documentElement.scrollTop)?e:document.body.scrollTop)+'px'); 
+	left: expression(0+((e=document.documentElement.scrollLeft)?e:document.body.scrollLeft)+'px');
+} 
